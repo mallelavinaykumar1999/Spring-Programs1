@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!--  <bean name="testc" class="com.Springdemo.helloworld.test">
+<constructor-arg value="100" type="int"></constructor-arg>
+</bean>-->
+<bean id="add" class="com.Springdemo.helloworld.Address">
+<property name="street" value="kasipadu"></property>
+<property name="city" value="guntur"></property>
+<property name="state" value="andhra pradesh"></property>
+<property name="country" value="india"></property>
+</bean>
+<bean name="helloWorld" class="com.Springdemo.helloworld.Student" autowire="constructor">
+<constructor-arg value="101"></constructor-arg>
+
+<constructor-arg value="Vinay"></constructor-arg>
+
+<constructor-arg value="75.50"></constructor-arg>
+
+<!--  <constructor-arg ref="testc" type="test"></constructor-arg>-->
+</bean>
+
+</beans>

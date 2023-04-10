@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="qa" class="com.Springdemo.helloworld.Question">
+<property name="qid" value="1"></property>
+<property name="question" value="write down names of students in Ls batch"></property>
+<property name="ans">
+<list>
+<value>Vinay</value>
+<value>sohail</value>
+<value>swami</value>
+<value>nagendra</value>
+<value>jyothi</value>
+<value>ranjitha</value>
+<value>pavan</value>
+<value>pk</value>
+</list>
+</property>
+
+
+</bean>
+<bean id="add" class="com.Springdemo.helloworld.Address">
+<property name="street" value="kasipadu"></property>
+<property name="city" value="guntur"></property>
+<property name="state" value="andhra pradesh"></property>
+<property name="country" value="india"></property>
+</bean>
+<bean id="vinay" class="com.Springdemo.helloworld.Emp" autowire="byName">
+  <property name="id">
+<value>20</value>
+</property>
+<property name="name">
+<value>Vinay</value></property>
+<property name="city">
+<value>vijayawada</value></property>
+<!--<property name="ad" ref="add"></property>
+<property name="q" ref="qa"></property> -->
+
+</bean>
+</beans>
